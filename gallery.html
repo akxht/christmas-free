@@ -5,17 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Christmas Gallery 🎄</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+.gallery img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.4s ease forwards;
+}
+
+.gallery img:nth-child(1) { animation-delay: 0.2s; }
+.gallery img:nth-child(2) { animation-delay: 0.6s; }
+.gallery img:nth-child(3) { animation-delay: 1s; }
+.gallery img:nth-child(4) { animation-delay: 1.4s; }
+.gallery img:nth-child(5) { animation-delay: 1.8s; }
+.gallery img:nth-child(6) { animation-delay: 2.2s; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  </style>
 </head>
 <body>
   <div class="container">
+    <button id="music-toggle" class="button">Music OFF 🔇</button>
     <h1>Christmas Gallery 🎄</h1>
 
     <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf" />
-      <img src="https://images.unsplash.com/photo-1512389098783-66b81f86e199" />
-      <img src="https://images.unsplash.com/photo-1608889175112-b33f9f3c1c4a" />
-      <img src="https://images.unsplash.com/photo-1545580492-8859ba8323cb" />
-    </div>
+      <img src="assets/h1.jpg" />
+<img src="assets/h2.jpg" />
+<img src="assets/her3.jpg" />
+<img src="assets/her5.jpg" />
+<img src="assets/us1.jpg" />
+<img src="assets/us2.jpg" />
 
     <br /><br />
     <a href="index.html" class="button">Back to Message 🎄</a>
