@@ -7,7 +7,12 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  
+<div id="startOverlay">
+  <div class="start-text">Tap anywhere 💖</div>
+</div>
+
+<div class="container">
     <h1>Happy New Year, Hanna 🤍</h1>
     <p>
   Thank you for coming into my life.<br>
@@ -44,7 +49,12 @@
     <a href="notes.html" class="button">Open Notes 💌</a>
     <button id="music-toggle" class="button music-toggle" aria-pressed="false">🔈 Music OFF</button>
   </div>
-
+<script>
+  const overlay = document.getElementById("startOverlay");
+  overlay.addEventListener("click", () => {
+    overlay.classList.add("hidden");
+  });
+</script>
   <script src="script.js"></script>
 </body>
 </html>
