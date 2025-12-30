@@ -14,6 +14,17 @@ body {
   color: #f5f5f5;
   animation: fadeIn 1.2s ease;
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 /* Page animation */
 @keyframes fadeIn {
@@ -140,4 +151,31 @@ button:hover {
   .container {
     padding: 60px 16px;
   }
+}
+/* Secret hidden message */
+.secret {
+  margin-top: 50px;
+}
+
+.secret .hint {
+  font-size: 0.9rem;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.secret .message {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.6s ease;
+  margin-top: 10px;
+  color: #ffd27d;
+}
+
+/* Reveal on long press / hover */
+.secret:active .message,
+.secret:hover .message {
+  max-height: 200px;
+  opacity: 1;
 }
